@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment Menu & Packages // Glow & Blush</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Shared WhatsApp Modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="sub-label">PARLOUR CONCIERGE</span>
+        <h3 id="modal-title">Book Service</h3>
+      </div>
+      <form class="modal-form" id="whatsapp-booking-form">
+        <div class="form-group">
+          <label for="wa-name">Full Name</label>
+          <input type="text" id="wa-name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="wa-phone">Phone Number</label>
+          <input type="tel" id="wa-phone" placeholder="10-digit mobile number" required>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="wa-date">Preferred Date</label>
+            <input type="date" id="wa-date" required>
+          </div>
+          <div class="form-group">
+            <label for="wa-time">Time Slot</label>
+            <select id="wa-time">
+              <option value="Morning (10:00 AM - 01:00 PM)">Morning (10 AM - 1 PM)</option>
+              <option value="Afternoon (01:00 PM - 05:00 PM)">Afternoon (1 PM - 5 PM)</option>
+              <option value="Evening (05:00 PM - 08:00 PM)">Evening (5 PM - 8 PM)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-rose full-width">Send on WhatsApp ✨</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">GLOW<span>&</span>BLUSH</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-backdrop" id="nav-backdrop"></div>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link active">Menu & Price Estimator</a></li>
+          <li><a href="artists.html" class="nav-link">Bridal Artists</a></li>
+        </ul>
+        <button class="btn btn-rose nav-cta trigger-modal" data-intent="General Appointment Booking">Book Visit</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-top">
+    <div class="container text-center">
+      <span class="sub-label">RITUALS & INVESTMENTS</span>
+      <h1>Our Beauty & Bridal Menu</h1>
+      <p class="page-top-desc">Couture bridal suites, organic clinical skin therapies, and bespoke hair smoothing.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: Featured 3-Tier Packages -->
+  <section class="featured-packages-section">
+    <div class="container">
+      <div class="package-tiers-grid">
+        
+        <div class="package-tier-card">
+          <span class="tier-tag">EVENT GLAM</span>
+          <h3>Party & Sagan Glam</h3>
+          <div class="tier-price">&#8377;3,500 <span>/ guest</span></div>
+          <p class="tier-desc">Ideal for sangeet, cocktail nights, and celebratory events.</p>
+          <ul class="tier-features">
+            <li>HD Soft Glam Makeup</li>
+            <li>Voluminous Hollywood Curls or Blowout</li>
+            <li>Featherlight Mink Eyelashes</li>
+            <li>Saree or Dupatta Draping</li>
+          </ul>
+          <button class="btn btn-outline full-width trigger-modal" data-intent="Party & Sagan Glam Package (₹3,500)">Reserve Glam</button>
+        </div>
+
+        <div class="package-tier-card highlighted">
+          <div class="popular-ribbon">MOST REQUESTED</div>
+          <span class="tier-tag">THE COMPLETE BRIDAL</span>
+          <h3>Royal HD Bridal Suite</h3>
+          <div class="tier-price">&#8377;15,000 <span>/ bride</span></div>
+          <p class="tier-desc">16-hour camera-ready waterproof luxury bridal transformation.</p>
+          <ul class="tier-features">
+            <li>Airbrush Waterproof Bridal Makeup</li>
+            <li>Designer Floral Braid or Textured Bun</li>
+            <li>Jewelry & Heavy Lehenga Draping</li>
+            <li>Hydra-Glow Pre-Makeup Skin Prep</li>
+          </ul>
+          <button class="btn btn-rose full-width trigger-modal" data-intent="Royal HD Bridal Suite (₹15,000)">Reserve Bridal Suite</button>
+        </div>
+
+        <div class="package-tier-card">
+          <span class="tier-tag">PRE-BRIDAL</span>
+          <h3>Glow & Radiance Package</h3>
+          <div class="tier-price">&#8377;7,500 <span>/ session</span></div>
+          <p class="tier-desc">Complete skin, body, and hair glow ritual 3 days prior to your wedding.</p>
+          <ul class="tier-features">
+            <li>O3+ Bridal Radiance Facial & D-Tan</li>
+            <li>Full Body Rica Wax & Polishing</li>
+            <li>Luxury Rose Petal Pedicure & Manicure</li>
+            <li>Deep Conditioning Hair Spa with Steam</li>
+          </ul>
+          <button class="btn btn-outline full-width trigger-modal" data-intent="Pre-Bridal Radiance Package (₹7,500)">Reserve Pre-Bridal</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Interactive Filterable Pricebook Menu -->
+  <section class="pricebook-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-label">A LA CARTE MENU</span>
+        <h2>Explore By Treatment Category</h2>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="pricebook-filters">
+        <button class="filter-tab active" data-category="all">All Services</button>
+        <button class="filter-tab" data-category="bridal">Bridal & Makeup</button>
+        <button class="filter-tab" data-category="facials">Facials & Skin</button>
+        <button class="filter-tab" data-category="hair">Hair Care & Texture</button>
+        <button class="filter-tab" data-category="body">Waxing & Mani-Pedi</button>
+      </div>
+
+      <!-- 2-Column Menu Grid -->
+      <div class="menu-columns-grid">
+
+        <!-- Bridal -->
+        <div class="menu-item-row" data-category="bridal">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>HD Airbrush Bridal Makeup</h4>
+              <span class="badge-mini">Waterproof</span>
+            </div>
+            <p>Mink lashes, high-definition base, and dupatta/jewelry placement.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;15,000</span>
+            <button class="btn-book-link trigger-modal" data-intent="HD Airbrush Bridal Makeup (₹15,000)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="bridal">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Engagement & Sagan Soft Glam</h4>
+            </div>
+            <p>Dewy glass base, soft smokey eye, and designer hair styling.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;6,500</span>
+            <button class="btn-book-link trigger-modal" data-intent="Engagement Soft Glam (₹6,500)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="bridal">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Mehendi & Haldi Natural Glow Look</h4>
+            </div>
+            <p>Lightweight tint, floral hairstyle, and fresh dewy finish.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;4,500</span>
+            <button class="btn-book-link trigger-modal" data-intent="Mehendi/Haldi Look (₹4,500)">Book</button>
+          </div>
+        </div>
+
+        <!-- Facials & Skin -->
+        <div class="menu-item-row" data-category="facials">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Hydra-Infusion Glass Skin Facial</h4>
+              <span class="badge-mini">Trending</span>
+            </div>
+            <p>Hydro-dermabrasion, hyaluronic acid infusion, and cryo wand.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;2,800</span>
+            <button class="btn-book-link trigger-modal" data-intent="Hydra-Infusion Facial (₹2,800)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="facials">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>O3+ Bridal Radiance & Whitening Facial</h4>
+            </div>
+            <p>Oxygenating peel, deep blackhead cleanup, and brightening mask.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;3,200</span>
+            <button class="btn-book-link trigger-modal" data-intent="O3+ Radiance Facial (₹3,200)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="facials">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Sara Gold D-Tan Face & Neck Cleanup</h4>
+            </div>
+            <p>Herbal steam, instant sun-tan removal, and soothing gel pack.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;1,200</span>
+            <button class="btn-book-link trigger-modal" data-intent="Sara Gold D-Tan (₹1,200)">Book</button>
+          </div>
+        </div>
+
+        <!-- Hair Care -->
+        <div class="menu-item-row" data-category="hair">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Nanoplastia / Hair Botox Treatment</h4>
+              <span class="badge-mini">0% Frizz</span>
+            </div>
+            <p>Formaldehyde-free protein therapy for straight, mirror-like gloss.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;4,800</span>
+            <button class="btn-book-link trigger-modal" data-intent="Nanoplastia Treatment (₹4,800)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="hair">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>L'Oreal Keratin Silk Smoothening</h4>
+            </div>
+            <p>Permanent straightening with intense moisturizing serum.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;4,000</span>
+            <button class="btn-book-link trigger-modal" data-intent="Keratin Smoothening (₹4,000)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="hair">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Moroccan Argan Oil Spa & Haircut</h4>
+            </div>
+            <p>Scalp massage, deep steam conditioning, and customized layered cut.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;1,800</span>
+            <button class="btn-book-link trigger-modal" data-intent="Moroccan Spa & Cut (₹1,800)">Book</button>
+          </div>
+        </div>
+
+        <!-- Waxing & Body -->
+        <div class="menu-item-row" data-category="body">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Full Body Rica Liposoluble Wax</h4>
+              <span class="badge-mini">Painless</span>
+            </div>
+            <p>Includes full arms, legs, underarms, and back with post-wax oil.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;2,200</span>
+            <button class="btn-book-link trigger-modal" data-intent="Full Body Rica Wax (₹2,200)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="body">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Luxury Rose & Milk Pedicure + Manicure</h4>
+            </div>
+            <p>Rose petal foot soak, gentle scrub, cuticle therapy, and gel polish.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;1,500</span>
+            <button class="btn-book-link trigger-modal" data-intent="Luxury Mani-Pedi (₹1,500)">Book</button>
+          </div>
+        </div>
+
+        <div class="menu-item-row" data-category="body">
+          <div class="item-lead">
+            <div class="item-title-wrap">
+              <h4>Eyebrow Threading + Forehead + Upper Lip</h4>
+            </div>
+            <p>Precise hair removal with cooling aloe vera massage.</p>
+          </div>
+          <div class="item-dots"></div>
+          <div class="item-action">
+            <span class="price-val">&#8377;150</span>
+            <button class="btn-book-link trigger-modal" data-intent="Threading Combo (₹150)">Book</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Live Bill & Time Estimator -->
+  <section class="calc-section">
+    <div class="container">
+      <div class="calc-card">
+        <div class="calc-header text-center">
+          <span class="sub-label">INTERACTIVE ESTIMATOR</span>
+          <h2>Calculate Your Parlour Visit Total</h2>
+          <p>Tick the services you want to check estimated parlour time and total bill.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-items-list">
+            <label class="calc-item">
+              <input type="checkbox" class="bill-checkbox" data-name="HD Airbrush Bridal Makeup" data-price="15000" data-time="180">
+              <div class="calc-item-text">
+                <span class="item-title">HD Airbrush Bridal Makeup</span>
+                <span class="item-meta">180 mins &bull; &#8377;15,000</span>
+              </div>
+            </label>
+
+            <label class="calc-item">
+              <input type="checkbox" class="bill-checkbox" data-name="Hydra-Infusion Glass Skin Facial" data-price="2800" data-time="60">
+              <div class="calc-item-text">
+                <span class="item-title">Hydra-Infusion Glass Skin Facial</span>
+                <span class="item-meta">60 mins &bull; &#8377;2,800</span>
+              </div>
+            </label>
+
+            <label class="calc-item">
+              <input type="checkbox" class="bill-checkbox" data-name="Nanoplastia / Hair Botox" data-price="4800" data-time="120">
+              <div class="calc-item-text">
+                <span class="item-title">Nanoplastia / Hair Botox</span>
+                <span class="item-meta">120 mins &bull; &#8377;4,800</span>
+              </div>
+            </label>
+
+            <label class="calc-item">
+              <input type="checkbox" class="bill-checkbox" data-name="Full Body Rica Wax" data-price="2200" data-time="60">
+              <div class="calc-item-text">
+                <span class="item-title">Full Body Rica Wax</span>
+                <span class="item-meta">60 mins &bull; &#8377;2,200</span>
+              </div>
+            </label>
+
+            <label class="calc-item">
+              <input type="checkbox" class="bill-checkbox" data-name="Luxury Rose Mani-Pedi Spa" data-price="1500" data-time="60">
+              <div class="calc-item-text">
+                <span class="item-title">Luxury Rose Mani-Pedi Spa</span>
+                <span class="item-meta">60 mins &bull; &#8377;1,500</span>
+              </div>
+            </label>
+
+            <label class="calc-item">
+              <input type="checkbox" class="bill-checkbox" data-name="Moroccan Argan Hair Spa & Cut" data-price="1800" data-time="45">
+              <div class="calc-item-text">
+                <span class="item-title">Moroccan Argan Hair Spa & Cut</span>
+                <span class="item-meta">45 mins &bull; &#8377;1,800</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Total Summary Box -->
+          <div class="calc-total-box">
+            <h3>Estimated Session Summary</h3>
+            <div class="summary-row">
+              <span>Total Estimated Time:</span>
+              <strong id="total-time-text">0 mins</strong>
+            </div>
+            <div class="summary-row">
+              <span>Selected Services:</span>
+              <strong id="total-count-text">0 items</strong>
+            </div>
+            <div class="summary-line"></div>
+            <div class="summary-row total-row">
+              <span>Total Estimated Bill:</span>
+              <strong class="total-price-text" id="total-price-text">&#8377;0</strong>
+            </div>
+            <button class="btn btn-rose full-width" id="book-calc-package-btn" disabled>Book Custom Package on WhatsApp ✨</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="index.html" class="brand-logo">GLOW<span>&</span>BLUSH</a>
+        <p>&copy; 2026 Glow & Blush Beauty Lounge. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <p>Bespoke Bridal, Skincare & Hair Lounge</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

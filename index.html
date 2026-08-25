@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow & Blush // Luxury Women's Beauty Parlour & Bridal Lounge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Shared Direct WhatsApp Booking Modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="sub-label">PARLOUR CONCIERGE</span>
+        <h3 id="modal-title">Book an Appointment</h3>
+      </div>
+      <form class="modal-form" id="whatsapp-booking-form">
+        <div class="form-group">
+          <label for="wa-name">Full Name</label>
+          <input type="text" id="wa-name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="wa-phone">Phone Number</label>
+          <input type="tel" id="wa-phone" placeholder="10-digit mobile number" required>
+        </div>
+        <div class="form-group">
+          <label for="wa-service">Service or Package</label>
+          <select id="wa-service">
+            <option value="Royal HD Bridal Suite (₹15,000)">Royal HD Bridal Suite (₹15,000)</option>
+            <option value="Engagement & Sagan Soft Glam (₹6,500)">Engagement & Sagan Soft Glam (₹6,500)</option>
+            <option value="Pre-Bridal Radiance Package (₹7,500)">Pre-Bridal Radiance Package (₹7,500)</option>
+            <option value="Hydra-Infusion Glass Skin Facial (₹2,800)">Hydra-Infusion Glass Skin Facial (₹2,800)</option>
+            <option value="Nanoplastia Hair Botox (₹4,800)">Nanoplastia Hair Botox (₹4,800)</option>
+            <option value="Full Body Rica Wax (₹2,200)">Full Body Rica Wax (₹2,200)</option>
+            <option value="Luxury Rose Pedicure & Manicure (₹1,500)">Luxury Rose Pedicure & Manicure (₹1,500)</option>
+          </select>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="wa-date">Preferred Date</label>
+            <input type="date" id="wa-date" required>
+          </div>
+          <div class="form-group">
+            <label for="wa-time">Time Slot</label>
+            <select id="wa-time">
+              <option value="Morning (10:00 AM - 01:00 PM)">Morning (10 AM - 1 PM)</option>
+              <option value="Afternoon (01:00 PM - 05:00 PM)">Afternoon (1 PM - 5 PM)</option>
+              <option value="Evening (05:00 PM - 08:00 PM)">Evening (5 PM - 8 PM)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-rose full-width">Confirm on WhatsApp ✨</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">GLOW<span>&</span>BLUSH</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-backdrop" id="nav-backdrop"></div>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="services.html" class="nav-link">Menu & Price Estimator</a></li>
+          <li><a href="artists.html" class="nav-link">Bridal Artists</a></li>
+        </ul>
+        <button class="btn btn-rose nav-cta trigger-modal" data-intent="General Appointment Booking">Book Visit</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <span class="sub-label">EXCLUSIVE WOMEN'S BEAUTY & BRIDAL LOUNGE</span>
+        <h1>Enhancing Your Natural Elegance & Radiance</h1>
+        <p class="hero-desc">
+          An intimate sanctuary for couture bridal makeovers, clinical skincare therapies, and hair transformations designed for your most memorable moments.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-rose trigger-modal" data-intent="Signature Bridal Consultation">Book Consultation</button>
+          <a href="services.html" class="btn btn-outline">Explore Treatment Menu</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>1,400+</strong>
+            <span>Brides Styled</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <strong>4.9 ★</strong>
+            <span>Client Rating</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <strong>100%</strong>
+            <span>Women-Only Studio</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-image-box">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=800&auto=format&fit=crop" alt="Bridal makeup styling">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stepped Auto-Advancing Makeover Lookbook -->
+  <section class="gallery-slider-section">
+    <div class="container text-center">
+      <span class="sub-label">REAL TRANSFORMATIONS</span>
+      <h2>Our Bridal & Glam Lookbook</h2>
+    </div>
+
+    <div class="slider-viewport" id="slider-viewport">
+      <div class="slider-track" id="slider-track">
+        <div class="slider-card">
+          <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?q=80&w=600&auto=format&fit=crop" alt="Bridal HD Makeup">
+          <div class="card-caption">
+            <strong>Full HD Royal Bridal Glam</strong>
+            <span>Airbrush finish & lehenga draping</span>
+          </div>
+        </div>
+        <div class="slider-card">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" alt="Floral Hair Styling">
+          <div class="card-caption">
+            <strong>Bridal Floral Braid & Bun</strong>
+            <span>Textured updos with fresh roses</span>
+          </div>
+        </div>
+        <div class="slider-card">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop" alt="Glass Skin Facial">
+          <div class="card-caption">
+            <strong>Hydra-Infusion Glass Facial</strong>
+            <span>Deep hydration & radiant glow peel</span>
+          </div>
+        </div>
+        <div class="slider-card">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" alt="Balayage & Color">
+          <div class="card-caption">
+            <strong>French Balayage & Tonal Glaze</strong>
+            <span>Seamless blends with Olaplex shine</span>
+          </div>
+        </div>
+        <div class="slider-card">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" alt="Nail Couture Spa">
+          <div class="card-caption">
+            <strong>Luxury Gel Nail Extensions</strong>
+            <span>French ombre & chrome accents</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="slider-nav-controls">
+      <button class="slide-arrow" id="slide-prev" aria-label="Previous Photo">&#8592;</button>
+      <div class="slider-dots" id="slider-dots"></div>
+      <button class="slide-arrow" id="slide-next" aria-label="Next Photo">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- Popular Services (Pop-In On Scroll) -->
+  <section class="services-overview reveal-on-scroll">
+    <div class="container">
+      <div class="text-center section-header">
+        <span class="sub-label">SIGNATURE DISCIPLINES</span>
+        <h2>What We Specialize In</h2>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <span class="card-icon">👑</span>
+          <h3>Bridal & Event Glam</h3>
+          <p>HD airbrush makeup, saree and lehenga draping, floral hair styling, and lash setting.</p>
+          <a href="services.html" class="card-link">Explore Bridal Suites &rarr;</a>
+        </div>
+        <div class="overview-card">
+          <span class="card-icon">🌸</span>
+          <h3>Clinical Dermal Facials</h3>
+          <p>Hydra-dew deep pore treatments, O3+ bridal radiance facials, and anti-tan therapies.</p>
+          <a href="services.html" class="card-link">Explore Skin Menu &rarr;</a>
+        </div>
+        <div class="overview-card">
+          <span class="card-icon">✨</span>
+          <h3>Hair Smoothing & Botox</h3>
+          <p>Formaldehyde-free nanoplastia, hair botox, dimensional balayage, and root coverage.</p>
+          <a href="services.html" class="card-link">Explore Hair Menu &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Planning Your Wedding or Special Event?</h2>
+      <p>Reserve your private consultation directly with our bridal directors on WhatsApp.</p>
+      <button class="btn btn-rose trigger-modal" data-intent="VIP Bridal Consultation">Chat with us</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="index.html" class="brand-logo">GLOW<span>&</span>BLUSH</a>
+        <p>Your premier sanctuary for bridal couture, skincare therapies, and hair design.</p>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2026 Glow & Blush Beauty Lounge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

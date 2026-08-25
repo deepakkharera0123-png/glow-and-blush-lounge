@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridal Artists & Stylists // Glow & Blush</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Shared Modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="sub-label">ARTIST BOOKING</span>
+        <h3 id="modal-title">Book an Artist</h3>
+      </div>
+      <form class="modal-form" id="whatsapp-booking-form">
+        <div class="form-group">
+          <label for="wa-name">Full Name</label>
+          <input type="text" id="wa-name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="wa-phone">Phone Number</label>
+          <input type="tel" id="wa-phone" placeholder="10-digit mobile number" required>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="wa-date">Preferred Date</label>
+            <input type="date" id="wa-date" required>
+          </div>
+          <div class="form-group">
+            <label for="wa-time">Time Slot</label>
+            <select id="wa-time">
+              <option value="Morning (10:00 AM - 01:00 PM)">Morning (10 AM - 1 PM)</option>
+              <option value="Afternoon (01:00 PM - 05:00 PM)">Afternoon (1 PM - 5 PM)</option>
+              <option value="Evening (05:00 PM - 08:00 PM)">Evening (5 PM - 8 PM)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-rose full-width">Book on WhatsApp ✨</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">GLOW<span>&</span>BLUSH</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-backdrop" id="nav-backdrop"></div>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Menu & Price Estimator</a></li>
+          <li><a href="artists.html" class="nav-link active">Bridal Artists</a></li>
+        </ul>
+        <button class="btn btn-rose nav-cta trigger-modal" data-intent="General Appointment Booking">Book Visit</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-top">
+    <div class="container text-center">
+      <span class="sub-label">OUR EXPERTS</span>
+      <h1>Master Makeup & Hair Artists</h1>
+      <p class="page-top-desc">Meet our senior bridal directors dedicated to making your special day flawless.</p>
+    </div>
+  </section>
+
+  <!-- Compact Stylist Profiles -->
+  <section class="stylists-section">
+    <div class="container">
+      <div class="stylists-compact-grid">
+        
+        <!-- Artist 1 -->
+        <div class="stylist-compact-card">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" alt="Aanya Verma" class="stylist-avatar">
+          </div>
+          <span class="badge-role">HEAD BRIDAL ARTIST</span>
+          <h3>Aanya Verma</h3>
+          <p class="exp-text">10+ Years Exp &bull; HD Airbrush & Celebrity Looks</p>
+          <ul class="mini-skills">
+            <li>Bridal Airbrush Glow</li>
+            <li>Saree & Dupatta Draping</li>
+            <li>Eye Contour & Lash Setting</li>
+          </ul>
+          <button class="btn btn-rose btn-sm full-width trigger-modal" data-intent="Bridal Session with Aanya Verma">Book with Aanya</button>
+        </div>
+
+        <!-- Artist 2 -->
+        <div class="stylist-compact-card">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format&fit=crop" alt="Meera Sen" class="stylist-avatar">
+          </div>
+          <span class="badge-role">LEAD SKIN AESTHETICIAN</span>
+          <h3>Dr. Meera Sen</h3>
+          <p class="exp-text">8+ Years Exp &bull; Dermal Skincare Specialist</p>
+          <ul class="mini-skills">
+            <li>Pre-Bridal Hydra Treatments</li>
+            <li>O3+ Peels & Barrier Repair</li>
+            <li>Cryo Facial Therapy</li>
+          </ul>
+          <button class="btn btn-rose btn-sm full-width trigger-modal" data-intent="Skin Ritual with Dr. Meera Sen">Book with Meera</button>
+        </div>
+
+        <!-- Artist 3 -->
+        <div class="stylist-compact-card">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop" alt="Rhea Kapoor" class="stylist-avatar">
+          </div>
+          <span class="badge-role">CREATIVE HAIR DIRECTOR</span>
+          <h3>Rhea Kapoor</h3>
+          <p class="exp-text">7+ Years Exp &bull; Hair Updos & Balayage</p>
+          <ul class="mini-skills">
+            <li>Bridal Floral Braids & Buns</li>
+            <li>Nanoplastia & Hair Botox</li>
+            <li>Balayage & Pastel Gloss</li>
+          </ul>
+          <button class="btn btn-rose btn-sm full-width trigger-modal" data-intent="Hair Styling with Rhea Kapoor">Book with Rhea</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="index.html" class="brand-logo">GLOW<span>&</span>BLUSH</a>
+        <p>&copy; 2026 Glow & Blush Beauty Lounge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
